@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/movies', [App\Http\Controllers\HomeController::class, 'movies'])->name('home');
+Route::get('/movies/{id}/detalhes', [App\Http\Controllers\HomeController::class, 'movie'])->name('home');
+Route::get('/genders', [App\Http\Controllers\HomeController::class, 'genders'])->name('genders');
+Route::get('/genders/{id}/detalhes', [App\Http\Controllers\HomeController::class, 'gender'])->name('genders');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'aboutMe'])->name('aboutMe');
